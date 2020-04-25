@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <table border=1>
+    <script>
+      function ms(name, kor, math, eng, sci) {
+        this.이름 = name;
+        this.국어 = kor;
+        this.수학 = math;
+        this.영어 = eng;
+        this.과학 = sci;
+        this.총점 = kor+math+eng+sci;
+        this.평균 = this.총점/4;
+      }
+
+      ms.prototype.toString = function() {
+        var s = "<tr>";
+        for (k in this) {
+          if (typeof(this[k]) != "function") {
+            s += k + '\t' + this[k] + '\n';
+          }
+        }
+        return s;
+      }
+
+      var students = [];
+
+      students.push(new ms('윤인성', 87, 98, 88, 95));
+      students.push(new ms('연하진', 92, 98, 96, 98));
+      students.push(new ms('구지연', 76, 96, 94, 90));
+      students.push(new ms('나선주', 98, 92, 96, 92));
+      students.push(new ms('윤아린', 95, 98, 98, 98));
+      students.push(new ms('윤명월', 64, 88, 92, 92));
+      students.push(new ms('김미화', 82, 86, 98, 88));
+      students.push(new ms('김연화', 88, 74, 78, 92));
+      students.push(new ms('박아현', 97, 92, 88, 95));
+      students.push(new ms('서준서', 45, 52, 72, 78));
+
+
+      document.write('<tr>');
+      for (var k in (Object(students[0]))) {
+        if (k != "toString") {
+          document.write("<th>");
+          document.write(k);
+          document.write("</th>");
+        }
+      }
+      document.write('</tr>');
+
+
+
+
+      for (var i in students) {
+        document.write('<tr>');
+
+        for (var j in students[i]) {
+          if (j != "toString") {
+            document.write("<td>");
+            document.write(students[i][j]);
+            document.write("</td>");
+          }
+        }
+        document.write('</tr>');
+      } //이름
+
+
+
+      var tot = [],
+        kn = 0;
+
+      for (k in students[0]) {
+
+        if (k != 'toString') {
+          tot[kn] = 0;
+          document.write('<td>');
+          for (i in students) {
+            if (k == '이름') {
+              tot[kn] = ' ';
+            } else if (k == '총점') {
+              tot[kn] = this.총점;
+            } else if (k == '평균') {
+              tot[kn] = this.평균;
+            } else
+              tot[kn] += students[i][k];
+          }
+          if (tot[kn] == ' ') {
+            document.write('<tr>');
+            document.write("<td>반평균</td>");
+          } else {
+            document.write(tot[kn++] / students.length);
+          }
+        }
+      }
+      document.write("</tr>");
+    </script>
+  </table>
+</body>
+
+</html>
