@@ -1,0 +1,10 @@
+
+nav{
+  float:left;
+ height: 900px;
+ width:15%;
+  background-color: yellow;
+}
+section>article{
+  float:left;
+}
