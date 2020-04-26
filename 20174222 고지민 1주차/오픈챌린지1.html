@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title> 나의 소개 </title>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background-color: #CED8F6;
+      color: green;
+      margin-left: 40px;
+      margin-right: 40px;
+      font-size: 20px;
+    }
+
+    h3 {
+      text-align: center;
+      color: blue;
+    }
+
+    span {
+      color: red;
+      font-size: 20px;
+    }
+
+    hr {
+      height: 5px;
+      border: solid grey;
+      background-color: grey;
+    }
+    }
+  </style>
+  <script>
+    function show() {
+      document.getElementById("fig").src = "사진.JPG";
+    }
+
+    function hide() {
+      document.getElementById("fig").src = "";
+    }
+  </script>
+</head>
+
+<body>
+  <h3 onmouseover="show()" onmouseout="hide()"><!-- -->
+    고지민 </h3>
+  <hr>
+  <div><img id="fig" .src=""></div>
+  저는 광주대학교에서 컴퓨터 전공을하고있는학생입니다.
+  좋아하는 과목은 <span> 자바 </span> 입니다.
+
+
+</body>
+
+</html>

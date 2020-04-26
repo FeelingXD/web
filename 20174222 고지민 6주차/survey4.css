@@ -1,0 +1,40 @@
+body {
+    background-color: aliceblue;
+}
+h3 {
+    text-align: center;
+    color: brown;
+}
+p {
+    font-family: "휴먼편지체";
+    font-size: 1em;
+    text-indent: 1em;
+}
+section {
+    background-color: pink;
+    margin: 5px;
+
+}
+article {
+    color: blue;
+    text-indent: 1em;
+
+}
+label {
+    color: black;
+    font-family: "휴먼편지체";
+    font-size: 1em;
+}
+footer {
+    height: 100px;
+    background-color: violet;
+    font-family: "휴먼편지체";
+    font-size: 1em;
+    text-indent: 1em;
+}
+header{
+  background: yellow;
+}
+h1{
+  text-align: center;
+}

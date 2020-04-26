@@ -1,0 +1,35 @@
+
+header{
+  border-bottom:1px;
+  border-bottom-style:groove;
+
+}
+body{
+  background-color: aliceblue;
+}
+h1{
+  color: brown;
+  text-align: center;
+}
+h2{
+  color:blue;
+  text-shadow: 2px 2px 2px gray;
+}
+ul.hh{
+  border-width: 1px;
+  border-style: dotted;
+}
+a{
+  text-decoration: none;
+}
+p{
+   font-family: 휴먼편지체;
+   text-indent: 1em;
+   font-size: 1em;
+}
+footer{
+  background-color: orange;
+  border-color:orange;
+ border-radius: 50px;
+
+}
