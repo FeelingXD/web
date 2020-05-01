@@ -5,6 +5,9 @@ nav{
  width:15%;
   background-color: yellow;
 }
+body{
+  display: bloc
+}
 article{
   float:left;
 }
