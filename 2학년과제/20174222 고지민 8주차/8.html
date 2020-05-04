@@ -47,34 +47,33 @@
 
     #main_header>a.left {
       width: 62px;
-      left: 5px, top:7px;
+      left: 5px;
+      top: 7px;
+      background: url('css_sprites.png');
+      background-position: 0px 0px;
+      text-indent: -99999px;
     }
 
     #main_header>label.right {
       width: 32px;
-      left: 5px, top:7px;
-      /* 안보이게 */
-    }
-    #main_header>a.left{
-      background : url('sprites.png');
-      background-position: 0px 0px;
-      text-indent: -99999px;
-    }
-    #main_header>label.right{
-      background : url('sprites.png');
+      right: 5px;
+      top: 7px;
+
+      background: url('css_sprites.png');
       background-position: -62px 0px;
       text-indent: -99999px;
     }
+
     /*토글목록 */
     #toggle {
       display: none;
     }
 
-    #toggle + #wrap>#toggle_gnb_wrap {
+    #toggle+#wrap>#toggle_gnb_wrap {
       display: none;
     }
 
-    #toggle:checked + #wrap>#toggle_gnb_wrap {
+    #toggle:checked+#wrap>#toggle_gnb_wrap {
       display: block;
     }
 
@@ -91,7 +90,7 @@
 
 
     /* 토글목록 */
-    #toggle_gnb > ul {
+    #toggle_gnb>ul {
       overflow: hidden;
     }
 
@@ -109,7 +108,8 @@
 
     #top_gnb>div>a {
       /*수평정렬*/
-      float: left width: 25%;
+      float: left;
+      width: 25%;
       /*크기 및 색상 정렬*/
       height: 35px;
       line-height: 35px;
@@ -120,10 +120,12 @@
     #bottom_gnb {
       display: table;
       width: 100%;
+      border-bottom: 1px solid black;
     }
 
     #bottom_gnb>div {
       display: table-cell;
+      position: relative;
     }
 
     #bottom_gnb>div>a {
@@ -143,10 +145,16 @@
       border-left: 1px solid black;
       content: '';
     }
-    #section_header{padding:20px;}
-    #seciton_article{padding:10px;}
 
-    #main_footer{
+    #section_header {
+      padding: 20px;
+    }
+
+    #seciton_article {
+      padding: 10px;
+    }
+
+    #main_footer {
       padding: 10px;
       border-top: 3px solid black;
       text-align: center;
@@ -163,7 +171,7 @@
       <h1>Mobile</h1>
       <label class="right" for="toggle" onclick="">Toggle</label>
     </header>
-    <div class="toggle_gnb_wrap">
+    <div id="toggle_gnb_wrap">
       <div id="toggle_gnb">
         <ul>
           <li><a href="#">버튼</a></li>
@@ -186,11 +194,13 @@
       <div><a href="#">버튼</a></div>
     </nav>
     <nav id="bottom_gnb">
+
       <div><a href="#">버튼</a></div>
       <div><a href="#">버튼</a></div>
       <div><a href="#">버튼</a></div>
       <div><a href="#">버튼</a></div>
       <div><a href="#">버튼</a></div>
+
     </nav>
     <section id="main_section">
       <header id="section_header">
@@ -198,17 +208,17 @@
         <time>2012-12-09 - Birthday</time>
       </header>
       <article id="section_article">
-        <p>lorem ipsum dolor sit amet, consectetur adipsiscing elit.</p>
-        <br/>
-        <p>lorem ipsum dolor sit amet, consectetur adipsiscing elit.</p>
-        <br/>
-        <p>lorem ipsum dolor sit amet, consectetur adipsiscing elit.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <br />
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <br />
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </article>
     </section>
-<footer id="main_footer">
-<h3>HTML3 + CSS3 Basic</h3>
-<address>Website Layout Basic</address>
-</footer>
+    <footer id="main_footer">
+      <h3>HTML3 + CSS3 Basic</h3>
+      <address>Website Layout Basic</address>
+    </footer>
   </div>
 
 </body>
