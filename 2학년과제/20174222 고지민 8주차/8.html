@@ -1,34 +1,78 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,user-scalable=no"/>
-    <style media="screen">
-      * {margin:0; padding:0;}
-      body {font-family: 'Helvetica', 'sans-serif';}
-      li {list-style: none;}
-      a {text-decoration: none;}
-      #main_header{
-        height: 45px;
-        background: url('header_background.png');
-      }
-    </style>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,user-scalable=no" />
+  <style media="screen">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Helvetica', 'sans-serif';
+    }
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /*  초기화  */
+    #main_header {
+      /*배경 지*/
+      height: 45px;
+      background: url('header_background.png');
+
+      /*자손 위치를 지정*/
+      position: relative;
+      text-align: center;
+      line-height: 45px;
+    }
+
+    #main_header>h1 {
+      color: white;
+    }
+
+    #main_header>a,
+    #main_header>label {
+      display: block;
+      height: 32px;
+      position: absolute;
+    }
+
+    #main_header>a.left {
+      width: 62px;
+      left: 5px;
+      top: 7px;
+    }
+
+    main_header>label.right {
+      width: 32px;
+      right: 5px;
+      top: 7px;
+    }
+  </style>
 
 
-    <title>Chapter 6</title>
-  </head>
-  <body>
-    <input id="toggle" type="checkbox" />
-    <div id="wrap">
-      <header id="main_header">
-        <a class="left" href="#">Main</a>
-        <h1>Mobile</h1>
-        <label class="right" for="toggle" onclick="">Toggle</label>
+  <title>Chapter 6</title>
+</head>
 
+<body>
+  <input id="toggle" type="checkbox" />
+  <div id="wrap">
+    <header id="main_header">
+      <a class="left" href="#">Main</a>
+      <h1>Mobile</h1>
+      <label class="right" for="toggle" onclick="">Toggle</label>
+    </header>
 
-      </header>
+  </div>
+</body>
 
-    </div>
-  </body>
 </html>
