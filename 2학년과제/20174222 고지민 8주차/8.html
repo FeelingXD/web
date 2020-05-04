@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,user-scalable=no" />
   <style media="screen">
@@ -48,21 +46,43 @@
 
     #main_header>a.left {
       width: 62px;
-      left: 5px;
-      top: 7px;
+      left: 5px, top:7px;
+      background: url('sprites.png');
+      background-position: 0px 0px;
+      text-indent: -99999px; /* 안보이게 */
     }
-
-    main_header>label.right {
+    #main_header>label.right {
       width: 32px;
-      right: 5px;
-      top: 7px;
+      left: 5px, top:7px;
+      background: url('sprites.png');
+      background-position: -62px 0px;
+      text-indent: -99999px; /* 안보이게 */
     }
+    /*토글지역 */
+    #toggle {display: none;}
+    #toggle + #wrap > #toggle_gnb_wrap{display: none;}
+    #toggle:checked + #wrap > #toggle_gnb_wrap{display: block;}
+
+        /* 레이아웃색상*/
+    #toggle_gnb_wrap{
+      background-color: #363636;
+      padding: 15px;
+    }
+    #toggle_gnb{
+      padding : #FFFFFF;
+      padding : 5px;
+    }
+
+
+    /* 토글목록 */
+    #toggle_gnb> ul{overflow: hidden;}
+    #toggle_gnb> ul> li{
+      width: 80px; float : left;
+    }
+
   </style>
-
-
   <title>Chapter 6</title>
 </head>
-
 <body>
   <input id="toggle" type="checkbox" />
   <div id="wrap">
@@ -71,7 +91,22 @@
       <h1>Mobile</h1>
       <label class="right" for="toggle" onclick="">Toggle</label>
     </header>
+<div class="toggle_gnb_wrap">
+  <div id="toggle_gnb">
+    <ul>
+      <li><a href="#">버튼</a></li>
+      <li><a href="#">버튼</a></li>
+      <li><a href="#">버튼</a></li>
+      <li><a href="#">버튼</a></li>
+      <li><a href="#">버튼</a></li>
+      <li><a href="#">버튼</a></li>
+      <li><a href="#">버튼</a></li>
+      <li><a href="#">버튼</a></li>
+    </ul>
 
+  </div>
+
+</div>
   </div>
 </body>
 
