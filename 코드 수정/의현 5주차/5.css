@@ -1,17 +1,50 @@
-html {height: 100%}
-body {margin:0px;height: 100%;}
+@media screen and (max-width: 768px)
+{/*핸드폰 일 경우 */
+  *{margin: 0;padding: 0;}
+  html,body{
+    height: auto;
+    width: auto;
+  }
+  header {
 
-header { background-color: yellowgreen;}
-header *{margin : 0px;}
-header {width : 100%; height : 15%;}
+    background-color: yellowgreen;
 
-h1  {text-align: center;}
+  }
+  h1 {
 
-nav {background-color : pink;}
-nav {float : left; width : 15%; height: 75%;}
+    text-align: center;
 
-section {background-color: skyblue;}
-section {float:left; width: 85%; height: 75%;}
+  }
+  nav {
+    background-color: pink;
+  }
 
-footer {background-color: gray;}
-footer {width: 100%; height: 10%; clear:both;}
+  nav {
+    float: left;
+    width: 15%;
+    height: 75%;
+  }
+
+  section {
+    background-color: skyblue;
+  }
+
+  section {
+    float: left;
+    width: 85%;
+    height: 75%;
+  }
+
+  footer {
+    background-color: gray;
+  }
+
+  footer {
+    width: 100%;
+    height: 10%;
+    clear: both;
+  }
+}
+@media screen and (min-width: 768px) and (max-width:959px){/*테블릿일 경우 */
+
+}
