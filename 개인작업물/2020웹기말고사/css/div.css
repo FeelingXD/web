@@ -1,3 +1,30 @@
 .thumnail {
   text-align: center
 }
+#content{
+  height: 100%;
+  width: 1280px;
+  margin: 0 auto;
+  background-color: gray;
+  padding: 10px;
+  overflow:hidden;
+}
+.article_info{
+  height: 250px;
+  text-align: center;
+  margin-top: 20px;
+}
+.article_info >h1{
+  padding:20px;
+}
+.article_info > p{
+  padding: 20px;
+}
+.article_info>img{
+  float: left;
+  max-height: 100%;
+  width: auto;
+}
+.bottom{
+  height: inherit;
+}

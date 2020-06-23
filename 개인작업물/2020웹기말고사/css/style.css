@@ -8,10 +8,65 @@ header{
   height: 20%;
   width: auto;
 }
-
-section{
-
+article,section,aside{
+  display: block;
 }
-article{
+section{
+  width: auto;
+  height: auto;
+  float: left;
+  margin-top: 20px;
+}
+aside{
+  margin: 20px;
+}
 
+article{
+height: 300px;
+}
+article ul{
+  font-size: 1.2em;
+  text-align: center;
+  padding: 20px;
+}
+
+#aside_left{
+  float: left;
+}
+#aside_right{
+  float: right;
+}
+#article_type1{
+  border: 2px solid yellow;
+  width: 850px;
+  background-color: #CAC9C9;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+#article_type1 h1{
+  font-size: 2em;
+}
+#article_type2{
+  float: left;
+  border: 2px solid yellow;
+  width: 420px;
+  text-align:justify;
+  list-style: disc;
+  background-color: #CAC9C9;
+}
+#article_type2>h1{
+  margin:20px;
+  text-align: center;
+  font-size: 2em;
+}
+#article_type3{
+  float: right;
+  border: 2px solid yellow;
+  width: 400px;
+  background-color: #CAC9C9;
+}
+#article_type3>h1{
+  margin:20px;
+  text-align: center;
+  font-size: 2em;
 }
