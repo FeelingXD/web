@@ -1,5 +1,11 @@
 footer{
-  width: auto;
-  height: auto;
-  background-color: green;
+  margin-top:  20px;
+height: 250px;
+background-color: black;
+  text-align: center;
+}
+footer>img{
+
+  height: 100%;
+  width: 450px;
 }

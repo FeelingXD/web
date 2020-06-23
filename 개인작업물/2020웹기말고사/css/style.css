@@ -1,6 +1,8 @@
 @import "reset.css";
 @import "div.css";
 @import "nav.css";
+@import "footer.css";
+@import "desktop.css";
 html,body{
   background-color: white/*#2f5288*/;
 }

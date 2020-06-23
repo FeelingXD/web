@@ -7,8 +7,8 @@ nav {
 }
 
 .nav_bar {
-  height: 30px width: 850px;
-  vertical-align: middle;
+  height: 30px;
+
   text-align: center;
 }
 .nav_bar ul{
