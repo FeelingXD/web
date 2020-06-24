@@ -3,6 +3,14 @@
 @import "nav.css";
 @import "footer.css";
 @import "desktop.css";
+/*html {
+  background: url(../img/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}*/
+}
 html,body{
   background-color: white/*#2f5288*/;
 }
