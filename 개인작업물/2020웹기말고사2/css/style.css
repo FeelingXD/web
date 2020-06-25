@@ -1,11 +1,15 @@
-@import "reset.css";
-@import url(https://fonts.googleapis.com/css?family=Balsamiq+Sans);
+@import "reset.css"; /*초기화 css*/
+@import url(https://fonts.googleapis.com/css?family=Balsamiq+Sans); /*폰트*/
 body{
   border-color: #e3f2fd;
   font-family: Balsamiq;
 }
 article{
   font-size: 14px;
+}
+p{
+  padding-top: 1em;
+  padding-left: 1em;
 }
 /*  zone  */
 #wrap{width: 1200px; margin: 0 auto;}
@@ -17,14 +21,7 @@ article{
 }
 /* MUSIC */
 #AD{ overflow:hidden;padding:2%;height:250px;background-color: #7ecbfd; }
-.AD_img{
-  position:relative;
-  background-color: green;
-  width: auto;
-  height:80%;
-  width: 100%;
-  background-image: url(../img/index_2.png);background-size: cover;
-}
+.AD_img{  position:relative;  background-color: green;  width: auto;  height:80%;  width: 100%;  background-image: url(../img/index_2.png);background-size: cover;}
 /* content1 */
 #content1{overflow: hidden; border-bottom: 3px solid #393e46;}
 #content1 h1{border: 3px solid gray;background-color:#393e46; color: white;}
@@ -37,10 +34,14 @@ article{
   list-style: default;
 }
 #content1 .nav ul li{
-  height: 15%;
+  height: 10%;
   font-size: 1.5em;
   border-bottom: 2px solid lightgray;
+  display: flex;
+  align-items: center;
+  padding: 2%;
 }
+#content1 .nav ul li a{ line-height: 100%;}
 #content1 .article_right1{float: left;width: 70%; height: 250px;background: #00a5fb;}
 #content1 .article_right2{float: left;width: 70%; height: 250px;background: #0096fa;}
 #content1 h1 {padding:20px;}
