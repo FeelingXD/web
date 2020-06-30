@@ -1,0 +1,182 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'spoqa han sans', sans-serif;
+    font-weight: 100;
+}
+ul, li{
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: #F2F2F2;
+}
+a:hover{
+    color: lightgray;
+}
+span{
+    border-bottom: 1px solid;
+}
+@font-face{
+    font-family: 'spoqa han sans';
+    src:url(./src/font/Spoqa_Han_Sans/Spoqa\ Han\ Sans\ Thin.woff) format('woff'),
+        url(./src/font/Spoqa_Han_Sans/Spoqa\ Han\ Sans\ Thin.woff2) format('woff2'),
+        url(./src/font/Spoqa_Han_Sans/Spoqa\ Han\ Sans\ Thin.ttf) format('ttf');
+    font-weight: 100;
+}
+@font-face{
+    font-family: 'spoqa han sans';
+    src:url(./src/font/Spoqa_Han_Sans/Spoqa\ Han\ Sans\ Light.woff) format('woff'),
+        url(./src/font/Spoqa_Han_Sans/Spoqa\ Han\ Sans\ Light.woff2) format('woff2'),
+        url(./src/font/Spoqa_Han_Sans/Spoqa\ Han\ Sans\ Light.ttf) format('ttf');
+    font-weight: 300;
+}
+@font-face{
+    font-family: 'spoqa han sans';
+    src:url(./src/font/Spoqa_Han_Sans/Spoqa\ Han\ Sans\ Regular.woff) format('woff'),
+        url(./src/font/Spoqa_Han_Sans/Spoqa\ Han\ Sans\ Regular.woff2) format('woff2'),
+        url(./src/font/Spoqa_Han_Sans/Spoqa\ Han\ Sans\ Regular.ttf) format('ttf');
+    font-weight: 600;
+}
+/* pc ver */
+@media (min-width: 1230px){
+    .m{
+        display: none;
+    }
+    body> video>div{
+        background-image: url(./src/images/contact-image.png);
+        background-size: 100% 100%;
+    }
+    video {
+        position : fixed;
+        top : 0;
+        left : 0;
+        min-width : 100%;
+        min-height : 100%;
+        width : auto;
+        height : auto;
+        z-index : -1;
+    }
+
+    header{
+        width: 100%;
+        height: 100%;
+        text-align: right;
+        font-size: 1.3em;
+        font-weight: 100;
+        display: flex;
+        z-index: 1;
+        position: fixed;
+    }
+
+    .about-menu{
+        transition: all .5s;
+
+    }
+    .about-us{
+        transition: all .35s;
+        height: 0;
+        opacity: 0;
+    }
+    .process{
+        transition: all .5s;
+        height: 0;
+        opacity: 0;
+    }
+    .about-menu:hover{
+        cursor: pointer;
+    }
+    .about-menu:hover >div >.about-us{
+        display: block;
+        height: 25px;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        opacity: 100;
+    }
+    .about-menu:hover >div >.process{
+        display: block;
+        height: 25px;
+        border-bottom: 1px solid white;
+        opacity: 100;
+    }
+
+
+    .homelink{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        z-index: 1;
+    }
+    .homelink img{
+        width: 1.7vw;
+        position: fixed;
+        bottom: 10px;
+        left: 1%;
+    }
+
+    .home{
+        width: 4.16666666667%;
+        border-right: 1px solid white;
+        color: white;
+
+    }
+    .empty{
+        width: 4.16666666667%;
+        border-right: 1px solid white;
+        color: white;
+    }
+    .about{
+        width: 8.33333333333%;
+        border-right: 1px solid white;
+        color: white;
+    }
+    .writting{
+        width: 16.66666666667%;
+        border-right: 1px solid white;
+        color: white;
+    }
+    .project{
+        width: 50%;
+        border-right: 1px solid white;
+        color: white;
+    }
+    .contact{
+        width: 16.66666666667%;
+        color: white;
+    }
+    .background{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .section-1{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+    .section-1 .home img{
+        position: fixed;
+        bottom: 0;
+        height: 90%;
+        width: 100%;
+    }
+    .section-1 .about div{
+        margin-top: 90%;
+        font-size: 1.4rem;
+    }
+
+    .section-1 .project div{
+        font-size: 1.4rem;
+        margin-top: 20%;
+    }
+    .section-1 .inquiry a{
+        border-bottom: 1px solid;
+    }
+}
