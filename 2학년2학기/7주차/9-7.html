@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 디폴트 행동취소</title>
+
+<script>
+    function query(){
+        var ret = confirm("네이버로 이동하시겠습니까?");
+        return ret;
+    }
+    function noAction(){
+        e.preventDefault();
+    }
+</script>
+</head>
+<body>
+    <h3>이벤트의 디폴트 행동취소</h3>
+    <hr>
+    <a href="http://naver.com" onclick="return query()">
+    링크</a>
+<hr>
+<form action="">
+        <input type="checkbox">빵<br>
+        <input type="checkbox" onclick="noAction(event)">술 X
+</form>
+</body>
+</html>
