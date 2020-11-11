@@ -103,11 +103,12 @@
     width: 80%;
 }
 
-.chat-screen .chat_messages{
+.chat-screen .chat__messages {
     border-top:1px solid #f7f7f7;
     display: flex;
     flex-direction: column;
     align-items:center;
+    justify-content: center;
     padding: 0px 20px;
     padding-top: 30px;
 }
@@ -130,11 +131,11 @@
     margin-bottom: 20px;
 }
 
-.incoming-message{
+.incoming-message {
     align-self:flex-start;
 }
 
-.sent-message{
+.sent-message {
     align-self: flex-end;
 }
 /* spin 생략 */
@@ -149,7 +150,7 @@
 
 .message .message__bubble{
     background-color: white;
-    display: black;
+    display: block;
     box-shadow:  rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px,
     rgba(0, 0, 0, 0.024) 0px -6px 16px -6px;
