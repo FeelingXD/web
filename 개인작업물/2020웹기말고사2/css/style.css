@@ -19,7 +19,7 @@ p{
   height: 100%;
   width: auto;
 }
-/* MUSIC */
+/* AD */
 #AD{ overflow:hidden;padding:2%;height:250px;background-color: #7ecbfd; }
 .AD_img{  position:relative;  background-color: green;  width: auto;  height:80%;  width: 100%;  background-image: url(../img/index_2.png);background-size: cover;}
 /* content1 */
