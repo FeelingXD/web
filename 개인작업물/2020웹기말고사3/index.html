@@ -9,6 +9,15 @@
   <link rel="stylesheet" href="css/style.css">
   <title>2A.M Chill Vibe🎧</title>
   <script src="js/main.js"></script>
+  <script>
+     function callFunction(){ //미구현 알람
+        var change = document.getElementsByTagName('p');
+        for(x=0;x<change.length;x++)
+        {
+            change.item(x).innerHTML="미구현 기능입니다.:("
+        }
+      }
+  </script>
 </head>
   <body>
     <div class="wrap">
@@ -22,11 +31,11 @@
           <nav class="nav">
             <ul>
               <h1>MENU✨</h1>
-              <li><a href="#">👀NOTICE&📰NEWS</a></li>
-              <li><a href="#">🎧MUSIC</a></li>
-              <li><a href="#">🎨ARTWORK</a></li>
-              <li><a href="#">🤣COMMUNITY</a></li>
-              <li><a href="#">💵DONATION</a></li>
+              <li><a href="javascript:void(0)" onclick="callFunction(); return false;" >👀NOTICE&📰NEWS</a></li>
+              <li><a href="javascript:void(0)" onclick="callFunction(); return false;">🎧MUSIC</a></li>
+              <li><a href="javascript:void(0)" onclick="callFunction(); return false;">🎨ARTWORK</a></li>
+              <li><a href="javascript:void(0)" onclick="callFunction(); return false;">🤣COMMUNITY</a></li>
+              <li><a href="javascript:void(0)" onclick="callFunction(); return false;">💵DONATION</a></li>
             </ul>
           </nav>
           <article class="article_right1">
@@ -42,12 +51,20 @@
         </section>
           <section id="content3">
               <h1>🎨ARTWORK</h1>
-              <article class="article_square1"> </article>
-              <article class="article_square2"> </article>
-              <article class="article_square3"></article>
-              <article class="article_square4"></article>
+              <article class="article_square1">
+                <img src="img/artwork1.png" alt="missing">
+              </article>
+              <article class="article_square2">
+                <img src="img/artwork2.png" alt="missing">
+              </article>
+              <article class="article_square3">
+                <img src="img/artwork3.png" alt="missing">
+              </article>
+              <article class="article_square4">
+                <img src="img/artwork4.jpg" alt="missing">
+              </article>
           </section>
-          <footer id="footer">Here is footer<br>
+          <footer onload="printClock()" id="footer">footer<br>
           <div class="hidden">
               But if my grade hit rock bottom then imma be the Son of Sam
           </div>
