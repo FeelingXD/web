@@ -10,17 +10,14 @@
     <title>관리페이지</title>
 </head>
 <body>
-    <form action="login.php" method="post" class="loginForm">
-        <h2>Login</h2>
-        <div class="idForm">
-            <input type="text" class="id" placeholder="ID">
-        </div>
-        <div class="pwForm">
-            <input type="text" class="pw" placeholder="PW">
-        </div>
-        <button class="login_btn" onclick="">
-        버튼이름
-        </button>
-    </form>
+    <header>
+    <?php include "header.php";?>
+    </header>
+    <section>
+    <?php include "login.php";?>
+    </section>
+    <footer>
+    <?php include "footer.php";?>
+    </footer>
 </body>
 </html>
