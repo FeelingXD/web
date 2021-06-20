@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="./css/common.css">
 <link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
-<body> 
+<body> \
 	<header>
     	<?php include "header2.php";?>
     </header>
