@@ -23,6 +23,9 @@
     "prettier": "2.1.2"
   },
   "dependencies": {
-    "chart.js": "^2.9.4"
+    "chart.js": "^2.9.4",
+    "node-sass": "^7.0.1",
+    "styled-components": "^5.3.3",
+    "yarn": "^1.22.17"
   }
 }
