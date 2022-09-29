@@ -30,12 +30,12 @@ function App() {
   ]
   return (
     <div className='App'>
-      <Greet name='jimin' message={10} isLoggedIn={true}/>
+      <Greet name='jimin' message ={5} isLoggedIn={true}/>
       <Person name={personName}/>
       <PersonList names={nameList}/>
       <Status status='success'/>
       <Oscar>
-        <Heading >Place holder</Heading>
+        <Heading>Place holder</Heading>
       </Oscar>
         <Button handleClick={(event,id) => {
          console.log('clicked!',event,id)
