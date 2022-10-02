@@ -6,13 +6,12 @@ export default function Header({}: Props) {
   return (
     <header className={styles.header}>
       Header
-      <div className='nav'>
+      <div className={styles.nav}>
         nav
         <div>
             nav in div
         </div>
       </div>
-
     </header>
   )
 }
