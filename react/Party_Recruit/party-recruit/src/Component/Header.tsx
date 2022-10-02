@@ -6,10 +6,10 @@ export default function Header({}: Props) {
   return (
     <header className={styles.header}>
       Header
-      <div className={styles.nav}>
-        nav
+      <div className={styles.menu}>
+        menu
         <div>
-            nav in div
+            menu in div
         </div>
       </div>
     </header>

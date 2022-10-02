@@ -1,9 +1,12 @@
 .header{
     color : red;
     display: left;
-
+    left: 0;
+    width: auto;
+    height: 100%;
+    float: left;
 }
-.nav{
+.menu{
     color: green;
     div{
         color:blue;
