@@ -1,3 +1,4 @@
+@import 'reset.scss';
 .header{
     color : red;
     display: left;
@@ -8,7 +9,13 @@
 }
 .menu{
     color: green;
-    div{
-        color:blue;
+}
+.link_login{
+    text-decoration: none;
+    &::before{
+        //before effect login
+    }
+    &::after{
+        //after effect login 
     }
 }
