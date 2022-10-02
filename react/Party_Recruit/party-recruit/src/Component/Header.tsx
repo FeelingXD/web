@@ -10,10 +10,19 @@ export default function Header({}: Props) {
       Header
       <div className={styles.menu}>
         menu
-        <ul>
-          <a href="#" className={styles.link_login} onClick={tologin}>
-            <span className="text">로그인</span>
-          </a>
+          <div className={styles.profile} role='menu'>
+            <a href="#" className={styles.link_login} onClick={tologin}>
+              <span className="text">로그인</span>
+            </a>
+          </div>
+          <div className={styles.menu} role='menu'>
+              <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+              </ul>
+          </div>
+          <ul>
         </ul>
       </div>
     </header>
