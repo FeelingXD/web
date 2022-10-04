@@ -2,12 +2,15 @@
 .header{
     color : red;
     display: left;
-    width: auto;
-    height: auto;
+    width: 25%;
+    height: 100vh;
     float: left;
+    background-color: #000;
+    border-right: 1px solid hsla(0,0%,100%,.1);
 }
 .menu{
-    color: green;
+        color: green;
+        
 }
 .link_login{
     text-decoration: none;
