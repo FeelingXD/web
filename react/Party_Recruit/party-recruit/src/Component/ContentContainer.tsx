@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 type Props = {}
 
 type State = {}
@@ -9,7 +8,11 @@ export default class ContentContainer extends Component<Props, State> {
 
   render() {
     return (
-      <div>ContentContainer</div>
+      <div className='Container'>
+        <div className='Container_img'/>
+        <div className='Container_title'></div>
+        <div className='Container_desc'></div>
+      </div>
     )
   }
 }
