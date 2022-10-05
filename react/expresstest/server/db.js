@@ -1,17 +1,18 @@
 const mongoose = require("mongoose");
 const mongodb = "mongodb://localhost:27017/party-recruit";
-mongoose.connect(mongodb,function(err){
-    if(err){
-        console.error('connectiong error' ,err);
-    }
-    console.log('connected!');
-});
+var db = mongoose.connection;
+        mongoose.connect('mongodb://localhost:27017/party-recruit');
+        db.on('error', console.error);
+        db.once('open', function(){
+            console.log('connected!');
+        });
+        
 module.exports = () =>{
     function connect(){
-        mongoose.connect(mongodb,function(err){
-            if(err){
-                console.error('connectiong error' ,err);
-            }
+        var db = mongoose.connection;
+        mongoose.connect('mongodb://localhost:27017/party-recruit');
+        db.on('error', console.error);
+        db.once('open', function(){
             console.log('connected!');
         });
     }
