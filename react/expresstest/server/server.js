@@ -1,6 +1,18 @@
 const express = require('express')
 const app = express()
 const path = require('path')
+// const db = require('./db')
+const mongoose =require('mongoose')
+// mongoose.connect('mongodb://localhost:27017/party-recruit')
+
+var db = mongoose.connection;
+db.on('error', console.error);
+db.once('open', function(){
+    console.log('connected!');
+});
+
+mongoose.connect('mongodb://localhost:27017/party-recruit');
+
 
 app.listen(8080,function(){
     console.log('listening complete')
