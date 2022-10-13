@@ -18,7 +18,7 @@ export default class BaseController{
         }catch(error){
             res.status(400).send(`error in this post ${this.modelName}`)
         }
-        res.send('hello')
+        
     }
 
     get = async (req:Request,res:Response) =>{
@@ -29,13 +29,13 @@ export default class BaseController{
         }catch(error){
             res.status(400).send(`error in this get ${this.modelName}`)
         }
-        res.send('hello')
+       
     }
 
     getById = async (req:Request, res:Response ) =>{
         try{
             const { id }  =req.params
-            const dbData = await this.model.find()
+            const dbData = await this.model.find({_id: id})
             res.send(dbData)
         }catch(error){
             res.status(400).send(`error in this get ${this.modelName}`)

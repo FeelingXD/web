@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from "../db";
 
 const CommentSchema = new mongoose.Schema({
     title:{
@@ -13,6 +13,6 @@ const CommentSchema = new mongoose.Schema({
     timestamps: true
 })
 
-const Comment = mongoose.model('commnets',CommentSchema)
+const Comment = mongoose.model('comments',CommentSchema)
 
 export default Comment

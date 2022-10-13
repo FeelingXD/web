@@ -19,7 +19,11 @@ const TodoSchema = new mongoose.Schema({
                 ref :"comments"
             }
         ]
-})
+},{
+    timestamps: true
+}
+
+)
 
 const Todo = mongoose.model("todos",TodoSchema)
 export default Todo

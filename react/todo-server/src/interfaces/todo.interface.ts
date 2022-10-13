@@ -1,7 +1,6 @@
-export interface TodoI{
-    id?:string,
-    title:string,
-    description:string,
-    done:boolean,
+export default interface TodoI{
+    title: string,
+    description: string,
+    done: boolean,
     comments:[]
 }

@@ -1,5 +1,4 @@
-export interface CommentI{
+export default interface CommentI{
     title:string,
-    description: string,
-    
+    description: string,   
 }

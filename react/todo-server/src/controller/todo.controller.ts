@@ -4,4 +4,5 @@ export default class TodoController extends BaseController{
     constructor(){
         super(Todo)
     }
+    
 }
