@@ -170,11 +170,10 @@
 .incoming-message .message__bubble{
     border-bottom-left-radius: 0px;
     color: white;
-    background-image: linear-gradient(to right,#3494e6, #ec6ead);
+    background-image: linear-gradient(#e66465, #9198e5);
 }
 
 .sent-message .message__bubble{
     border-bottom-right-radius: 0px;
-    background-image: linear-gradient(to right, #000428, #004e92);
+    background-image: linear-gradient(#e66465, #9198e5);
 }
-/* incomiingAnim keyframe 생략 */
