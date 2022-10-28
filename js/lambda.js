@@ -12,6 +12,8 @@ const  a= [
 ];
 
 const a2 = a.map(function(s){return s.length});
-console.log(a2) // 문제가있네 .
+console.log(a2)
 const a3 = a.map( s => s.length );
 console.log(a3)
+a4= a.filter(a => a.length>6)
+console.log(a4)
