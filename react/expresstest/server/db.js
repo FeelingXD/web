@@ -20,3 +20,7 @@ module.exports = () =>{
     connect();
     mongoose.connection.on('disconnected',connect);
 }
+const User = mongoose.model('user',mongoose.Schema({
+    id : String,
+    pw : String,
+}));

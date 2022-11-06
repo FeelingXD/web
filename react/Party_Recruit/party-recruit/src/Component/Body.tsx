@@ -7,6 +7,7 @@ export default function Body({}: Props) {
   return (
     <div className={style.contents}>  
       <Container/>
+      
     </div>
   )
 }
