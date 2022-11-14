@@ -1,4 +1,5 @@
 /* array type */
+export
 let a: number[] =[1,2]
 let b: string[] = ['name','age']
 let c: boolean[] = [true]
