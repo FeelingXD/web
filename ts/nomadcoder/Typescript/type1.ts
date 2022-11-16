@@ -10,7 +10,7 @@ const new_type: object={
 type Name= String
 type Age =number
 type Player={
-    name:Name,
+    name:Name,.
     age?:Age
 }
 
@@ -31,3 +31,4 @@ function playerMaker(name:String):Player{
 
 const nico = playerMaker('nico')
 nico.age=12
+console.log(nico.age)

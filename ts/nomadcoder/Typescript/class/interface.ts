@@ -15,8 +15,6 @@ interface Person{
     health:Health
 }
 
-//
-
 interface User{
     name:string
 }
@@ -28,4 +26,4 @@ const nico :Player={
     name:"nico"
 }
 
-console.log(nico)
+

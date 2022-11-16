@@ -23,5 +23,5 @@ class Player extends User{
 const nico =new Player("nico","las","니꼬")
 
 nico.nickname
-console.log(nico.getfullname())
-console.log(nico.getnickname())
+nico.getfullname()
+
