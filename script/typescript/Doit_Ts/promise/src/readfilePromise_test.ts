@@ -16,3 +16,4 @@ readFilePromise('./package.json')
     .finally(() => {
         console.log('종료');
     });
+    
