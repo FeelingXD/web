@@ -1,54 +1,32 @@
-import { rejects } from "assert";
-import { NONAME } from "dns";
-import { readFile,readFileSync } from "fs";
+// 동기와 비동기 API
 
-// /**
-//  * 동기방식 read
-//  */
-// console.log(`read package.json`);
-// const buffer:Buffer = readFileSync('./package.json')
-// console.log(buffer.toString());
+import { readFileSync, readFile } from "fs";
 
+// 동기 방식으로 읽기
+console.log('read package.json using synchronous api...')
+const buffer: Buffer = readFileSync('./package.json')
+console.log(buffer.toString())
 
-// /**
-//  * 비동기
-//  */
+// 비동기방식으로 읽기
+readFile('./package.json', (error, buffer) => {
+    console.log('read package.json using asynchronous api...')
+    console.log(buffer.toString())
+})
 
-// readFile('./package.json',(err,buf) =>{
-//     console.log(`read`);
-//     console.log(buf.toString());
-// } )
-
-
-// // Promise와 async/await 구문을 사용한 예
-// const readFilePromise = (filename: string): Promise<string> => new Promise<string>((resolve, reject) => {
-//     readFile(filename, (error: Error, buffer: Buffer) => {
-//         if (error)
-//             reject(error);
-//         else
-//             resolve(buffer.toString());
-//         return
-//      }
-//     );
-// });
-
-// (async () => {
-//     const content = await readFilePromise('./package.json');
-//     console.log('read package.json using Promise and async/await...');
-//     console.log(content);
-// })()
-
-// Promise.resolve(readFile('./package.json',(err,buf) =>{
-//     console.log(`read`);
-//     console.log(buf.toString());
-// } )).then(value => console.log(value))
-
+// promise 와 async/await 구문으로 읽기
 const readFilePromise = (filename: string): Promise<string> =>
-  new Promise<string>(
-    (resolve: (value: string) => void, reject: (error: any) => void) => {
-      readFile(filename, (err: any, buffer: Buffer) => {
-        if (err) reject(err);
-        else resolve(buffer.toString());
-      });
-    }
-  );
+    new Promise<string>((resolve, reject) => {
+        readFile(filename, (error, buffer) => {
+            if (error) {
+                reject(error)
+            } else {
+                resolve(buffer.toString())
+            }
+        })
+    });
+
+(async () => {
+    const content: string = await readFilePromise('./package.json')
+    console.log('read package.json using Promise and async/await...')
+    console.log(content)
+})()
