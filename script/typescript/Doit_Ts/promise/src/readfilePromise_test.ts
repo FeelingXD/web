@@ -1,5 +1,4 @@
 // Promise
-
 import {readFilePromise} from "./readFilePromise";
 
 readFilePromise('./package.json')
