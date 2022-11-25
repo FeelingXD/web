@@ -1,0 +1,2 @@
+GET http://naver.com 
+# naver request extension
