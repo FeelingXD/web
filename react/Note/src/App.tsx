@@ -1,12 +1,29 @@
 import "bootstrap/dist/css/bootstrap.min.css"
-import React, { Component } from "react"
+import React, { Component ,useState} from "react"
 import { ReactDOM } from "react"
 import { Container } from "react-bootstrap"
 import { Routes,Route,Navigate, Router } from "react-router"
 import { BrowserRouter } from "react-router-dom"
 import { NewNote } from "./components/NewNote"
+import { useLocalStorage } from "./func/useLocalStorage"
+
+export type Note={
+    id:string
+}&NoteData
+
+export type NoteData={
+    title:string,
+    markdown:string,
+    tag:Tag[]
+}
+
+export type Tag={
+    id:string,
+    label:string
+}
 
 function App(){
+    const [notes,setNotes] = useLocalStorage("notes",[])
     return(
     <Container className="my-4">
         <BrowserRouter>
