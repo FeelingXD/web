@@ -72,7 +72,6 @@ export const NoteForm = ({
                                         })
                                     )
                                 }}
-
                                 isMulti
                             />
                         </Form.Group>
