@@ -53,7 +53,7 @@ const testarr = [1, 2, 3, 4];
 const reducer = (arr, cur) => {
   arr + cur;
 };
-
+/* 
 Array.prototype.customreduce = (callback, initval) => {
   let index = 0;
   let acc;
@@ -62,6 +62,6 @@ Array.prototype.customreduce = (callback, initval) => {
     acc = callback(acc, this[index], index, this);
   }
   return acc;
-};
+}; */
 
 testarr.customreduce(reducer);
