@@ -26,17 +26,22 @@ type SimplifiedNote = {
 type NoteListProps = {
   availableTags: Tag[];
   notes: Note[];
+  onDeleteTag:(id:string)=>void
+  onUpdateTag:(id:string,label:string)=>void
 };
 
 type EditTagsModalProps = {
   show: boolean;
   availableTags: Tag[];
   handleClose: () => void;
+  onDeleteTag:(id:string)=>void
+  onUpdateTag:(id:string,label:string)=>void
 };
 
-export const Notelist = ({ availableTags, notes }: NoteListProps) => {
+export const Notelist = ({ availableTags, notes,onUpdateTag, onDeleteTag }: NoteListProps) => {
   const [selectedTags, setSelectedTags] = useState<Tag[]>([]);
   const [title, setTitle] = useState("");
+const [EditTagsModalIsOpen,setEditTagModalIsOpen]= useState(false)
 
   const filteredNotes = useMemo(() => {
     return notes.filter((note) => {
@@ -62,7 +67,7 @@ export const Notelist = ({ availableTags, notes }: NoteListProps) => {
             <Link to="/new">
               <Button variant="primary">Create </Button>
             </Link>
-            <Button variant="outline-secondary">Edit Tags</Button>
+            <Button onClick={()=>setEditTagModalIsOpen(true)} variant="outline-secondary">Edit Tags</Button>
           </Stack>
         </Col>
       </Row>
@@ -108,7 +113,15 @@ export const Notelist = ({ availableTags, notes }: NoteListProps) => {
           </Col>
         ))}
       </Row>
-      <EditTagsModal availableTags={} show={} handleClose={} />
+      <EditTagsModal 
+      availableTags={availableTags} 
+      show={EditTagsModalIsOpen} 
+      handleClose={()=>setEditTagModalIsOpen(false)}
+      onDeleteTag={ onDeleteTag}
+        onUpdateTag={onUpdateTag}
+       />
+      
+
     </>
   );
 };
@@ -145,10 +158,13 @@ const NoteCard = ({ id, title, tags }: SimplifiedNote) => {
     </Card>
   );
 };
+
 const EditTagsModal = ({
   availableTags,
   handleClose,
   show,
+  onDeleteTag,
+  onUpdateTag
 }: EditTagsModalProps) => {
   return (
     <Modal show={show} onHide={handleClose}>
@@ -158,17 +174,17 @@ const EditTagsModal = ({
       <Modal.Body>
         <Form>
           <Stack gap={2}>
-            {availableTags.map((tag) => {
+            {availableTags.map(tag => (
               <Row key={tag.id}>
                 <Col>
-                  <Form.Control type="text" value={tag.label} />
+                  <Form.Control type="text" value={tag.label} onChange={(e) =>onUpdateTag(tag.id, e.target.value)} />
                   {}
                 </Col>
                 <Col xs="auto">
-                  <Button variant="outline-danger">&times;</Button>
+                  <Button variant="outline-danger" onClick={()=>onDeleteTag(tag.id)}>&times;</Button>
                 </Col>
-              </Row>;
-            })}
+              </Row>
+            ))}
           </Stack>
         </Form>
       </Modal.Body>
