@@ -1,6 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { Component, useMemo, useState } from "react";
-import { ReactDOM } from "react";
 import { Container } from "react-bootstrap";
 import { Routes, Route, Navigate, Router } from "react-router";
 import { BrowserRouter } from "react-router-dom";

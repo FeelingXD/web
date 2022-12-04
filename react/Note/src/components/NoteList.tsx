@@ -111,6 +111,8 @@ const [EditTagsModalIsOpen,setEditTagModalIsOpen]= useState(false)
           <Col key={note.id}>
             <NoteCard id={note.id} title={note.title} tags={note.tags} />
           </Col>
+
+          
         ))}
       </Row>
       <EditTagsModal 
